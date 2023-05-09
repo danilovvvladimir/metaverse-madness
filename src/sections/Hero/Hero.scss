@@ -1,0 +1,71 @@
+.hero {
+  padding-top: 300px;
+  background-color: #000;
+  position: relative;
+  z-index: 10;
+  &__titlebox {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+  }
+  &__titlebox-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 70px;
+    &--accent {
+      margin: 0 5px;
+      border-color: #ffffff;
+      width: 150px;
+      height: 75px;
+      border: 16px solid #fff;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+  }
+  &__gradient {
+    position: absolute;
+    width: 100%;
+    /* height: 50px;*/
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-image: linear-gradient(
+      270deg,
+      hsl(295deg 76% 51%) 0%,
+      hsl(284deg 70% 73%) 26%,
+      hsl(257deg 70% 86%) 39%,
+      hsl(202deg 92% 90%) 50%,
+      hsl(215deg 77% 81%) 61%,
+      hsl(221deg 73% 70%) 74%,
+      hsl(220deg 76% 51%) 100%
+    );
+    filter: blur(50px);
+  }
+  &__imagebox {
+    z-index: -1;
+  }
+  &__image {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    box-shadow: 10px 14px 20px 7px rgba(34, 60, 80, 0.26);
+  }
+  &__trigger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    &-image {
+      cursor: pointer;
+    }
+  }
+}
