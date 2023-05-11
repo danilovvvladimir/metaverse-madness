@@ -1,0 +1,40 @@
+.about {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #1a232e;
+  position: relative;
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  &__pretitle {
+    margin-bottom: 15px;
+  }
+  &__description {
+    color: #c7c7c7;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    span {
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+  &__gradient {
+    &--right {
+      position: absolute;
+      right: 0;
+      top: -300px;
+      z-index: 5;
+      opacity: 0.4;
+    }
+    &--left {
+      position: absolute;
+      left: -100px;
+      top: 0px;
+      z-index: 5;
+    }
+  }
+}

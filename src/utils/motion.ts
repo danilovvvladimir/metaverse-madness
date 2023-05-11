@@ -36,3 +36,48 @@ export const textVariant = (delay: number) => ({
     },
   },
 });
+
+// interface ContainerVariants {
+//   hidden: {};
+//   visible: {
+//     transition: {
+//       staggerChildren: number;
+//       delayChildren: number;
+//     };
+//   };
+// }
+
+export const staggerContainer = (staggerChildren: any, delayChildren: any) => ({
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren,
+      delayChildren,
+    },
+  },
+});
+
+export const typingText = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      ease: "easeIn",
+    },
+  },
+};
+
+export const typingTextContainer = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (i = 1) => ({
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: i * 0.1 },
+  }),
+};
